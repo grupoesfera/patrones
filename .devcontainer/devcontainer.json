@@ -1,0 +1,16 @@
+{
+    "name": "Java DevContainer",
+    "image": "mcr.microsoft.com/devcontainers/java:21",
+    "features": {},
+    "postCreateCommand": "mvn clean install",
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "vscjava.vscode-java-pack",
+          "vscjava.vscode-maven",
+          "vscjava.vscode-java-test"
+        ]
+      }
+    }
+  }
+  
