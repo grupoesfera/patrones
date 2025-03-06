@@ -1,12 +1,8 @@
 {
     "name": "Java DevContainer",
     "image": "mcr.microsoft.com/devcontainers/java:21",
-    "features": {
-        "ghcr.io/devcontainers/features/maven:1": {
-            "version": "latest"
-        }
-    },
-    "postCreateCommand": "mvn clean install",
+    "features": {},
+    "postCreateCommand": "java -version",
     "customizations": {
         "vscode": {
             "extensions": [
