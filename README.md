@@ -33,6 +33,36 @@ classDiagram
     }
 ```
 
+## Control Remoto
+
+La implementación inicial del control remoto es la siguiente:
+
+```java
+
+    public void presionarBotonDeEncendido(int ranura) {
+        Dispositivo dispositivo = this.dispositivos[ranura];
+        if (dispositivo != null) {
+            if (dispositivo instanceof Luz) {
+                ((Luz)dispositivo).encender();
+            } else if (dispositivo instanceof Televisor) {
+                ((Televisor)dispositivo).prender();
+            }
+        }
+    }
+
+    public void presionarBotonDeApagado(int ranura) {
+        Dispositivo dispositivo = this.dispositivos[ranura];
+        if (dispositivo != null) {
+            if (dispositivo instanceof Luz) {
+                ((Luz)dispositivo).apagar();
+            } else if (dispositivo instanceof Televisor) {
+                ((Televisor)dispositivo).desconectar();
+            }
+        }
+    }
+
+```
+
 ## Actividad 1 - Ventilador de techo
 
 A las clases existentes del proveedor se agrega un nuevo dispositivo: VentiladorDeTecho
