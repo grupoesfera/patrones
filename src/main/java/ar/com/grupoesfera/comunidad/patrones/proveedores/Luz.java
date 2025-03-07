@@ -1,12 +1,11 @@
 package ar.com.grupoesfera.comunidad.patrones.proveedores;
 
-public class Luz {
+public class Luz extends Dispositivo {
 
     private final String TEMPLATE = "[LUZ en %s] %s%n";
-    private String ubicacion;
 
     public Luz(String ubicacion) {
-        this.ubicacion = ubicacion;
+        super(ubicacion);
     }
 
     public void encender() {

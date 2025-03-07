@@ -1,9 +1,14 @@
 package ar.com.grupoesfera.comunidad.patrones.proveedores;
 
-public class Televisor {
+public class Televisor extends Dispositivo {
 
     private final String TEMPLATE_ESTADO = "[TELEVISOR en %s] %s%n";
     private final String TEMPLATE_CANAL_DE_ENTRADA = "[TELEVISOR en %s] Canal de entrada: %s%n";
+
+    public Televisor(String ubicacion) {
+        super(ubicacion);
+        this.canalDeEntrada = CanalesDeEntrada.CABLE;
+    }
 
     public enum CanalesDeEntrada {
         CABLE,
@@ -14,19 +19,14 @@ public class Televisor {
     }
 
     private CanalesDeEntrada canalDeEntrada;
-    private String ubicacion;
 
-    public Televisor(String ubicacion) {
-        this.ubicacion = ubicacion;
-        this.canalDeEntrada = CanalesDeEntrada.CABLE;
+
+    public void prender() {
+        System.out.printf(TEMPLATE_ESTADO, this.ubicacion, "prendida");
     }
 
-    public void encender() {
-        System.out.printf(TEMPLATE_ESTADO, this.ubicacion, "encendida");
-    }
-
-    public void apagar() {
-        System.out.printf(TEMPLATE_ESTADO, this.ubicacion, "apagada");
+    public void desconectar() {
+        System.out.printf(TEMPLATE_ESTADO, this.ubicacion, "desconectada");
     }
 
     public void setCanalDeEntrada(CanalesDeEntrada canalDeEntrada) {

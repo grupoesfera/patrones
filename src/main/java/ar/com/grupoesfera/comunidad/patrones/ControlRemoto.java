@@ -1,25 +1,40 @@
 package ar.com.grupoesfera.comunidad.patrones;
 
+import ar.com.grupoesfera.comunidad.patrones.proveedores.Dispositivo;
+import ar.com.grupoesfera.comunidad.patrones.proveedores.Luz;
+import ar.com.grupoesfera.comunidad.patrones.proveedores.Televisor;
+
 public class ControlRemoto {
 
-    private Comando[] comandosDeEncendido;
-    private Comando[] comandosDeApagado;
+    private Dispositivo[] dispositivos;
 
     public ControlRemoto() {
-        this.comandosDeEncendido = new Comando[7];
-        this.comandosDeApagado = new Comando[7];
+        this.dispositivos = new Dispositivo[7];
     }
 
-    public void asignarComando(int ranura, Comando comandoDeEncendido, Comando comandoDeApagado) {
-        this.comandosDeEncendido[ranura] = comandoDeEncendido;
-        this.comandosDeApagado[ranura] = comandoDeApagado;
+    public void asignarDispositivo(int ranura, Dispositivo dispositivo) {
+        this.dispositivos[ranura] = dispositivo;
     }
 
     public void presionarBotonDeEncendido(int ranura) {
-        this.comandosDeEncendido[ranura].ejecutar();
+        Dispositivo dispositivo = this.dispositivos[ranura];
+        if (dispositivo != null) {
+            if (dispositivo instanceof Luz) {
+                ((Luz)dispositivo).encender();
+            } else if (dispositivo instanceof Televisor) {
+                ((Televisor)dispositivo).prender();
+            }
+        }
     }
 
     public void presionarBotonDeApagado(int ranura) {
-        this.comandosDeApagado[ranura].ejecutar();
+        Dispositivo dispositivo = this.dispositivos[ranura];
+        if (dispositivo != null) {
+            if (dispositivo instanceof Luz) {
+                ((Luz)dispositivo).apagar();
+            } else if (dispositivo instanceof Televisor) {
+                ((Televisor)dispositivo).desconectar();
+            }
+        }
     }
 }
