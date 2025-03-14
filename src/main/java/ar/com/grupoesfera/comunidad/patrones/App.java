@@ -15,10 +15,10 @@ public class App {
         controlRemoto.asignarDispositivo(1, luzCocina);
         controlRemoto.asignarDispositivo(2, televisorComedor);
 
-        controlRemoto.presionarBotonDeEncendido(0);
-        controlRemoto.presionarBotonDeEncendido(1);
-        controlRemoto.presionarBotonDeEncendido(2);
+        controlRemoto.encender(0);
+        controlRemoto.encender(1);
+        controlRemoto.encender(2);
 
-        controlRemoto.presionarBotonDeApagado(2);
+        controlRemoto.apagar(2);
     }
 }

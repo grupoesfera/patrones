@@ -16,7 +16,7 @@ public class ControlRemoto {
         this.dispositivos[ranura] = dispositivo;
     }
 
-    public void presionarBotonDeEncendido(int ranura) {
+    public void encender(int ranura) {
         Dispositivo dispositivo = this.dispositivos[ranura];
         if (dispositivo != null) {
             if (dispositivo instanceof Luz) {
@@ -27,7 +27,7 @@ public class ControlRemoto {
         }
     }
 
-    public void presionarBotonDeApagado(int ranura) {
+    public void apagar(int ranura) {
         Dispositivo dispositivo = this.dispositivos[ranura];
         if (dispositivo != null) {
             if (dispositivo instanceof Luz) {

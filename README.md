@@ -39,7 +39,7 @@ La implementación inicial del control remoto es la siguiente:
 
 ```java
 
-    public void presionarBotonDeEncendido(int ranura) {
+    public void encender(int ranura) {
         Dispositivo dispositivo = this.dispositivos[ranura];
         if (dispositivo != null) {
             if (dispositivo instanceof Luz) {
@@ -50,7 +50,7 @@ La implementación inicial del control remoto es la siguiente:
         }
     }
 
-    public void presionarBotonDeApagado(int ranura) {
+    public void apagar(int ranura) {
         Dispositivo dispositivo = this.dispositivos[ranura];
         if (dispositivo != null) {
             if (dispositivo instanceof Luz) {
