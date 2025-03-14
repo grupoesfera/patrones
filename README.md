@@ -72,10 +72,7 @@ classDiagram
     note "También hereda de Dispositivo"
     class VentiladorDeTecho {
         +bajo()
-        +medio()
-        +alto()
         +apagar()
-        +int obtenerVelocidad()
     }
 ```
 
@@ -89,10 +86,6 @@ Las ranuras pueden tener o no un dispositivo asignado. ¿Como podemos evitar che
 
 Implementar la funcionalidad de **"Deshacer"**. El botón de deshacer debe revetir la última acción realizada.
 Si la última acción fue: "Encender luces del comedor" al presionar deshacer las luces del comedor deben apagarse.
-
-### Adicional
-
-¿Que pasa con el ventilador de techo? Tener en cuenta que el ventilador de techo tiene 3 velocidades posibles: BAJO, MEDIO, ALTO
 
 ## Actividad 4 - Modo Gamer
 
