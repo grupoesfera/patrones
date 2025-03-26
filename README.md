@@ -107,3 +107,7 @@ Implementar en una ranura del Control Remoto el Modo Gamer que para el botón en
 - Apagar la luz del comedor
 - Encender la TV con canal de entrada en HDMI1
 - Encender la consola
+
+## Como ejecutar por fuera del IDE
+
+``` sh run.sh ```
