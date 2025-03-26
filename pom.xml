@@ -31,6 +31,21 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.5.1</version>
             </plugin>
-        </plugins>
+            <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.5.0</version>
+            <executions>
+                <execution>
+                    <goals>
+                        <goal>java</goal>
+                    </goals>
+                </execution>
+            </executions>
+            <configuration>
+                <mainClass>ar.com.grupoesfera.comunidad.patrones.App</mainClass>
+            </configuration>
+        </plugin>
+    </plugins>
     </build>
 </project>
