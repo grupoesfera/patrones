@@ -22,11 +22,11 @@ public class Televisor extends Dispositivo {
 
 
     public void prender() {
-        System.out.printf(TEMPLATE_ESTADO, this.ubicacion, "prendida");
+        System.out.printf(TEMPLATE_ESTADO, this.ubicacion, "prendido");
     }
 
     public void desconectar() {
-        System.out.printf(TEMPLATE_ESTADO, this.ubicacion, "desconectada");
+        System.out.printf(TEMPLATE_ESTADO, this.ubicacion, "desconectado");
     }
 
     public void setCanalDeEntrada(CanalesDeEntrada canalDeEntrada) {
